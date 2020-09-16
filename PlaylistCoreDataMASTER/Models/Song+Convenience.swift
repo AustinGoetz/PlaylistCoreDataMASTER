@@ -9,9 +9,10 @@
 import Foundation
 
 extension Song {
-    convenience init(name: String, artist: String, playlist: Playlist) {
+    convenience init(title: String, artist: String, playlist: Playlist) {
         self.init(context: CoreDataStack.context)
-        self.songName = name
+        self.title = title
+        self.artist = artist
         self.playlist = playlist
     }
 }

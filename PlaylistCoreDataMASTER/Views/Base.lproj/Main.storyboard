@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Ee-30-7uh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Playlist Table View Controller-->
         <scene sceneID="Tzt-NH-J1k">
             <objects>
-                <tableViewController id="mkK-G8-Us7" sceneMemberID="viewController">
+                <tableViewController id="mkK-G8-Us7" customClass="PlaylistTableViewController" customModule="PlaylistCoreDataMASTER" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="td1-kF-bCp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,17 +66,24 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="nUK-W1-cNB">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Hdp-bP-bux"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Hdp-bP-bux">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="mkK-G8-Us7" id="bCc-VH-Fjd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="playlistNameTextField" destination="fEy-QN-96d" id="ndD-xf-wXn"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KY1-FN-95T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="89.855072463768124" y="-104.46428571428571"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Song Table View Controller-->
         <scene sceneID="dOa-ih-oRu">
             <objects>
-                <tableViewController id="wbt-k4-cLD" sceneMemberID="viewController">
+                <tableViewController id="wbt-k4-cLD" customClass="SongTableViewController" customModule="PlaylistCoreDataMASTER" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yDy-a2-ccr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,8 +147,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Ham-Rd-3KU">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="nEm-kn-L9n"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="nEm-kn-L9n">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="wbt-k4-cLD" id="KUM-Wm-rfT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistNameTextField" destination="Cpx-aX-6qp" id="6eX-4R-KTv"/>
+                        <outlet property="songNameTextField" destination="GDM-Oe-b2Q" id="BOe-RW-qUy"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y6G-6m-LaZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
