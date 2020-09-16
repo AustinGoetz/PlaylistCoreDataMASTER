@@ -6,6 +6,7 @@
 //  Copyright © 2020 Austin Goetz. All rights reserved.
 //
 
+import Foundation
 import CoreData
 
 // Using an enum because it is lightweight

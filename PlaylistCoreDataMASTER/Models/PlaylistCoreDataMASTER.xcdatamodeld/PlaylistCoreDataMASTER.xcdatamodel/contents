@@ -5,12 +5,12 @@
         <relationship name="songs" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Song" inverseName="playlist" inverseEntity="Song"/>
     </entity>
     <entity name="Song" representedClassName="Song" syncable="YES" codeGenerationType="class">
-        <attribute name="artistName" optional="YES" attributeType="String"/>
-        <attribute name="songName" optional="YES" attributeType="String"/>
+        <attribute name="artist" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
         <relationship name="playlist" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Playlist" inverseName="songs" inverseEntity="Playlist"/>
     </entity>
     <elements>
-        <element name="Song" positionX="-63" positionY="-18" width="128" height="88"/>
         <element name="Playlist" positionX="-54" positionY="-9" width="128" height="73"/>
+        <element name="Song" positionX="-63" positionY="-18" width="128" height="88"/>
     </elements>
 </model>

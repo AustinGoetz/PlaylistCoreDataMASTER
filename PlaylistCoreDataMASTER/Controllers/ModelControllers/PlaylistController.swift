@@ -19,4 +19,26 @@ class PlaylistController {
         
         return(try? CoreDataStack.context.fetch(fetchRequest)) ?? []
     }
+    
+    // MARK: - CRUD
+    // Create
+    func createPlaylistWith(name: String) {
+        Playlist(name: name)
+        saveToPersistentStore()
+    }
+    
+    // Delete
+    func delete(playlist: Playlist) {
+        playlist.managedObjectContext?.delete(playlist)
+        saveToPersistentStore()
+    }
+    
+    // MARK: - Persistence
+    func saveToPersistentStore() {
+        do {
+            try CoreDataStack.context.save()
+        } catch {
+            print("Error in \(#function) : \(error.localizedDescription) \n---\n \(error)")
+        }
+    }
 }

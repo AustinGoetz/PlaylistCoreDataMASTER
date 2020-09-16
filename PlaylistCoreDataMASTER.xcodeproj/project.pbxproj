@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A66F1B725118E5800D8B5D8 /* SongController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A66F1B625118E5800D8B5D8 /* SongController.swift */; };
 		2ACA241C251170C100A7D32D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA241B251170C100A7D32D /* AppDelegate.swift */; };
 		2ACA241E251170C100A7D32D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA241D251170C100A7D32D /* SceneDelegate.swift */; };
 		2ACA2423251170C100A7D32D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ACA2421251170C100A7D32D /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A66F1B625118E5800D8B5D8 /* SongController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongController.swift; sourceTree = "<group>"; };
 		2ACA2418251170C100A7D32D /* PlaylistCoreDataMASTER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaylistCoreDataMASTER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ACA241B251170C100A7D32D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2ACA241D251170C100A7D32D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				2ACA243E25117E0600A7D32D /* PlaylistController.swift */,
+				2A66F1B625118E5800D8B5D8 /* SongController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			files = (
 				2ACA2426251170C100A7D32D /* PlaylistCoreDataMASTER.xcdatamodeld in Sources */,
 				2ACA243B25117CF200A7D32D /* Playlist+Convenience.swift in Sources */,
+				2A66F1B725118E5800D8B5D8 /* SongController.swift in Sources */,
 				2ACA243D25117D6800A7D32D /* Song+Convenience.swift in Sources */,
 				2ACA241C251170C100A7D32D /* AppDelegate.swift in Sources */,
 				2ACA241E251170C100A7D32D /* SceneDelegate.swift in Sources */,
